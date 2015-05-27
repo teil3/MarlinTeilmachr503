@@ -1,4 +1,4 @@
-# Marlin 3D Printer Firmware
+# Marlin 3D Printer Firmware adapted for Teilmachr503
 <img align="right" src="Documentation/Logo/Marlin%20Logo%20GitHub.png" />
 
  Documentation has moved to http://www.marlinfirmware.org
