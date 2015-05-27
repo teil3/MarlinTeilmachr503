@@ -69,6 +69,8 @@ static void lcd_sdcard_menu();
 #ifdef DELTA_CALIBRATION_MENU
 static void lcd_delta_calibrate_menu();
 #endif // DELTA_CALIBRATION_MENU
+//teilmachr bed calibrateion menu
+static void lcd_bed_calibrate_menu();
 
 static void lcd_quick_feedback();//Cause an LCD refresh, and give the user visual or audible feedback that something has happened
 
@@ -652,6 +654,18 @@ static void lcd_delta_calibrate_menu()
 }
 #endif // DELTA_CALIBRATION_MENU
 
+//calib menu for teilmachr503
+static void lcd_bed_calibrate_menu()
+{
+    START_MENU();
+    MENU_ITEM(back, MSG_MAIN, lcd_main_menu);
+    MENU_ITEM(gcode, MSG_AUTO_HOME, PSTR("G28"));
+    MENU_ITEM(gcode, MSG_CALIB_SCREW_1, PSTR("G1 Y135 X60 Z0"));
+    MENU_ITEM(gcode, MSG_CALIB_SCREW_2, PSTR("G1 Y200 X191 Z0"));
+    MENU_ITEM(gcode, MSG_CALIB_SCREW_3, PSTR("G1 Y70 X191 Z0"));
+    END_MENU();
+}
+
 float move_menu_scale;
 static void lcd_move_menu_axis();
 
@@ -745,6 +759,7 @@ static void lcd_control_menu()
     MENU_ITEM(back, MSG_MAIN, lcd_main_menu);
     MENU_ITEM(submenu, MSG_TEMPERATURE, lcd_control_temperature_menu);
     MENU_ITEM(submenu, MSG_MOTION, lcd_control_motion_menu);
+    MENU_ITEM(submenu, MSG_CALIB_MENU_LABEL, lcd_bed_calibrate_menu);
 	MENU_ITEM(submenu, MSG_VOLUMETRIC, lcd_control_volumetric_menu);
 
 #ifdef DOGLCD
