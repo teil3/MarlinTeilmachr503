@@ -431,7 +431,7 @@ static void lcd_tune_menu()
 #if TEMP_SENSOR_2 != 0
     MENU_ITEM_EDIT(int3, MSG_NOZZLE2, &target_temperature[2], 0, HEATER_2_MAXTEMP - 15);
 #endif
-#if TEMP_SENSOR_BED != 0
+#if TEMP_SENSOR_BED != 0 && degBed() < BED_MINTEMP
     MENU_ITEM_EDIT(int3, MSG_BED, &target_temperature_bed, 0, BED_MAXTEMP - 15);
 #endif
     MENU_ITEM_EDIT(int3, MSG_FAN_SPEED, &fanSpeed, 0, 255);

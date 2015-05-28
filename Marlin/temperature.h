@@ -93,6 +93,10 @@ FORCE_INLINE float degHotend(uint8_t extruder) {
 #endif
 
 FORCE_INLINE float degBed() {
+  //don't show minus temperatures (Teil3)
+  if(current_temperature_bed < 0) {
+    return 0;
+  }
   return current_temperature_bed;
 };
 
