@@ -125,7 +125,7 @@ static void lcd_implementation_init()
 			// Welcome message
 			u8g.setFont(u8g_font_6x10_marlin);
 			u8g.drawStr(68,10,"TEILMACHR"); 
-			u8g.drawStr(83,20,"305e");
+			u8g.drawStr(83,20,"503e");
 			u8g.setFont(u8g_font_5x8);
 			u8g.drawStr(66,60,"MARLIN 1.0.2");
 	   } while( u8g.nextPage() );
