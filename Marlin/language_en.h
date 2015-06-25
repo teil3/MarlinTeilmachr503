@@ -133,6 +133,7 @@
 #define MSG_CALIB_SCREW_1                   "Calib. Position 1"
 #define MSG_CALIB_SCREW_2                   "Calib. Position 2"
 #define MSG_CALIB_SCREW_3                   "Calib. Position 3"
+#define MSG_CALIB_SCREW_4                   "Calib. Position 4"
 
 #define MSG_RECTRACT                        "Rectract"
 
