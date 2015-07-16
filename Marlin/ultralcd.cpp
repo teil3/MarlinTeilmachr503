@@ -660,10 +660,10 @@ static void lcd_bed_calibrate_menu()
     START_MENU();
     MENU_ITEM(back, MSG_MAIN, lcd_main_menu);
     MENU_ITEM(gcode, MSG_AUTO_HOME, PSTR("G28"));
-    MENU_ITEM(gcode, MSG_CALIB_SCREW_1, PSTR("G1 Y135 X60 Z0"));
-    MENU_ITEM(gcode, MSG_CALIB_SCREW_2, PSTR("G1 Y200 X191 Z0"));
-    MENU_ITEM(gcode, MSG_CALIB_SCREW_3, PSTR("G1 Y70 X191 Z0"));
-    MENU_ITEM(gcode, MSG_CALIB_SCREW_4, PSTR("G1 Y135 X123 Z0"));    
+    MENU_ITEM(gcode, MSG_CALIB_SCREW_1, PSTR("G1 Y213 X60 Z0"));
+    MENU_ITEM(gcode, MSG_CALIB_SCREW_2, PSTR("G1 Y278 X191 Z0"));
+    MENU_ITEM(gcode, MSG_CALIB_SCREW_3, PSTR("G1 Y148 X191 Z0"));
+    MENU_ITEM(gcode, MSG_CALIB_SCREW_4, PSTR("G1 Y213 X123 Z0"));    
     END_MENU();
 }
 
